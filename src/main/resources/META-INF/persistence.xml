@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="cataloguing" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.nandom.app.entities.Answers</class>
+    <class>com.nandom.app.entities.Vwoveralltotal</class>
+    <class>com.nandom.app.entities.Vwtotaltechnologicalcategory</class>
+    <class>com.nandom.app.entities.Problemsolvingskills</class>
+    <class>com.nandom.app.entities.Vwtotalbehaviouralcategory</class>
+    <class>com.nandom.app.entities.Vwtechnologicalcategory</class>
+    <class>com.nandom.app.entities.Professionalskills</class>
+    <class>com.nandom.app.entities.Communicationskills</class>
+    <class>com.nandom.app.entities.Cataloguingskills</class>
+    <class>com.nandom.app.entities.Consistencyandadaptabilityskills</class>
+    <class>com.nandom.app.entities.Vwtotalknowledgecategory</class>
+    <class>com.nandom.app.entities.Knowledgeskills</class>
+    <class>com.nandom.app.entities.Teamwork</class>
+    <class>com.nandom.app.entities.Vwknowledgecategory</class>
+    <class>com.nandom.app.entities.Assessmentresult</class>
+    <class>com.nandom.app.entities.Indexingskills</class>
+    <class>com.nandom.app.entities.Vwprofessionalcategory</class>
+    <class>com.nandom.app.entities.Vwtotalprofessionalcategory</class>
+    <class>com.nandom.app.entities.Userprofile</class>
+    <class>com.nandom.app.entities.Vwbehaviouralcategory</class>
+    <class>com.nandom.app.entities.Vwtotalfunctionalcategory</class>
+    <class>com.nandom.app.entities.Judgementskills</class>
+    <class>com.nandom.app.entities.Leadershipskills</class>
+    <class>com.nandom.app.entities.Technologicalskills</class>
+    <class>com.nandom.app.entities.Vwfunctionalcategory</class>
+    <class>com.nandom.app.entities.Classificationskills</class>
+    <class>com.nandom.app.entities.Vwrecommendation</class>
+    <class>com.nandom.app.entities.Vwrecruitment</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cataloguing?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="nandom"/>
+    </properties>
+  </persistence-unit>
+</persistence>
