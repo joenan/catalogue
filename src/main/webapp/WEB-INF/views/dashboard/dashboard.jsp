@@ -67,7 +67,7 @@
         <fieldset>
             <h4><center>Cataloguer Competency Based Performance Assessment</center></h4>
             <h6 class="logininfo">Logged in as: 
-                <bold>
+                <b>
                     <a href="${pageContext.request.contextPath}/logout" alt="Logout">
                         <%
                             if (session != null) {
@@ -80,7 +80,7 @@
                             }
                         %>
                     </a>
-                </bold>
+                </b>
 
 
             </h6>
