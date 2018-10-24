@@ -6,6 +6,7 @@
 package com.nandom.app.service;
 
 import com.nandom.app.repository.AssessmentresultRepository;
+import com.nandom.app.repository.CataloguerprofileRepository;
 import com.nandom.app.repository.CataloguingSkillsRepository;
 import com.nandom.app.repository.ClassificationSkillsRepository;
 import com.nandom.app.repository.CommunicationSkillsRepository;
@@ -104,6 +105,9 @@ public class AppService {
 
     @Autowired
     VwrecommendationRepository recommendationService;
+
+    @Autowired
+    CataloguerprofileRepository cataloguerProfile;
 
     public KnowledgeSkillsRepository getKnowledgeService() {
         return knowledgeService;
@@ -279,6 +283,14 @@ public class AppService {
 
     public void setRecommendationService(VwrecommendationRepository recommendationService) {
         this.recommendationService = recommendationService;
+    }
+
+    public CataloguerprofileRepository getCataloguerProfile() {
+        return cataloguerProfile;
+    }
+
+    public void setCataloguerProfile(CataloguerprofileRepository cataloguerProfile) {
+        this.cataloguerProfile = cataloguerProfile;
     }
 
 }

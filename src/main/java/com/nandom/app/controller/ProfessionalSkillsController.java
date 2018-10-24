@@ -10,7 +10,6 @@ import com.nandom.app.entities.Userprofile;
 import com.nandom.app.service.AppService;
 import com.nandom.app.service.AssessmentStatus;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

@@ -7,6 +7,7 @@ package com.nandom.app.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,6 +16,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -39,6 +41,9 @@ import javax.persistence.TemporalType;
     , @NamedQuery(name = "Userprofile.findByYearsofexperience", query = "SELECT u FROM Userprofile u WHERE u.yearsofexperience = :yearsofexperience")
     , @NamedQuery(name = "Userprofile.findByRolesandresponsibilities", query = "SELECT u FROM Userprofile u WHERE u.rolesandresponsibilities = :rolesandresponsibilities")})
 public class Userprofile implements Serializable {
+
+    @OneToMany(mappedBy = "userid")
+    private List<Cataloguerprofile> cataloguerprofileList;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -186,6 +191,14 @@ public class Userprofile implements Serializable {
     @Override
     public String toString() {
         return "com.nandom.app.entities.Userprofile[ userid=" + userid + " ]";
+    }
+
+    public List<Cataloguerprofile> getCataloguerprofileList() {
+        return cataloguerprofileList;
+    }
+
+    public void setCataloguerprofileList(List<Cataloguerprofile> cataloguerprofileList) {
+        this.cataloguerprofileList = cataloguerprofileList;
     }
     
 }

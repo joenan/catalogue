@@ -82,7 +82,7 @@ public class TeamworkController {
         k.setNoofquestions(1);
         k.setPercentagescore(percentageScore);
         k.setUserid(user);
-        
+
         service.getTeamworkService().save(k);
         teamWork = 0;
         model.addAttribute("status", examCompleted);

@@ -53,6 +53,14 @@ public class HomeController {
             model.addAttribute("loginError", failedLogin);
             return "index/loginform";
         }
+
+        if (u.getUsertype().equals("Existing Cataloguer")) {
+            HttpSession session = request.getSession(false);
+            session.setAttribute("user", u);
+            session.setMaxInactiveInterval(1000000000);
+            return "dashboard/existingusersdashboard";
+        }
+
         HttpSession session = request.getSession(false);
         session.setAttribute("user", u);
         session.setMaxInactiveInterval(1000000000);
