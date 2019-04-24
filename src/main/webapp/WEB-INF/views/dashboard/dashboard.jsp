@@ -65,7 +65,7 @@
     </head>
     <body>
         <fieldset>
-            <h4><center>Cataloguer Competency Based Performance Assessment</center></h4>
+            <h4><center>Cataloguer Competency Assessment Software</center></h4>
             <h6 class="logininfo">Logged in as: 
                 <b>
                     <a href="${pageContext.request.contextPath}/logout" alt="Logout">
@@ -88,8 +88,9 @@
                 <div class="center">${status}</div>
             </center>
             <div id="section">
+
                 <table class="table table-bordered">
-                    <center><h3>Knowledge Base Assessment</h3></center>
+                    <center><h3>Knowledge</h3></center>
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">Serial No</th>
@@ -102,14 +103,32 @@
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Knowledge Skills</td>
+                            <td>Knowledge</td>
                             <td>18mins</td>
                     <form method="get" action="${pageContext.request.contextPath}/knowledgeskills"><td><button type="submit" class="btn btn-primary">Start</button></td></form>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Indexing Skills</td>
-                        <td>18mins</td>
+
+                    </tbody>
+                </table>
+
+
+                <table class="table table-bordered">
+                    <center><h3>Professional Skills</h3></center>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Serial No</th>
+                            <th scope="col">Assessment Type</th>
+                            <th scope="col">Time Allowed</th>
+                            <th scope="col">Attempt</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Indexing Skills</td>
+                            <td>18mins</td>
                     <form method="get" action="${pageContext.request.contextPath}/indexingskills"><td><button type="submit" class="btn btn-primary">Start</button></td></form>
                     </tr>
                     <tr>
@@ -123,9 +142,18 @@
                         <td>Cataloguing</td>
                         <td>20mins</td> 
                     <form method="get" action="${pageContext.request.contextPath}/cataloguingskills"><td><button type="submit" class="btn btn-primary">Start</button></td></form>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Subject Analysis</td>
+                        <td>10mins</td>
+                    <form method="get" action="${pageContext.request.contextPath}/professionalskills"><td><button type="submit" class="btn btn-primary">Start</button></td></form>
+                    </tr>
                     </tbody>
                 </table>
-                </section>
+
+                <center class="center"><h3>Attitude</h3></center>
+                <hr>
 
                 <table class="table table-bordered">
                     <center class="center"><h3>Behavioural Skills</h3></center>
@@ -191,27 +219,7 @@
                     </tbody>
                 </table>
 
-                <table class="table table-bordered">
-                    <center class="center"><h3>Professional Skills</h3></center>
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">Serial No</th>
-                            <th scope="col">Assessment Type</th>
-                            <th scope="col">Time Allowed</th>
-                            <th scope="col">Attempt</th>
-                        </tr>
 
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Subject Analysis</td>
-                            <td>10mins</td>
-                    <form method="get" action="${pageContext.request.contextPath}/professionalskills"><td><button type="submit" class="btn btn-primary">Start</button></td></form>
-                    </tr>
-
-                    </tbody>
-                </table>
 
                 <table class="table table-bordered">
                     <center class="center"><h3>Technological Skills</h3></center>

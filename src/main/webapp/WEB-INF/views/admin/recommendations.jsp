@@ -70,9 +70,6 @@
     <body class="">
         <div class="wrapper">
 
-
-
-
             <div class="sidebar" data-color="purple" data-background-color="white"
                  data-image="../assets/img/sidebar-1.jpg">
 
@@ -82,6 +79,12 @@
                 </div>
                 <div class="sidebar-wrapper">
                     <ul class="nav">
+
+                        <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/admin/individual">
+                                <i class="material-icons"></i>
+                                <p>Individual Assessment</p>
+                            </a>
+                        </li>
 
                         <li class="nav-item"><a class="nav-link"
                                                 href="${pageContext.request.contextPath}/admin">

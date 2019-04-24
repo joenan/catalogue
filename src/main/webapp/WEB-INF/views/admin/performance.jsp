@@ -18,7 +18,7 @@
         <link href="<c:url value="/resources/assets/css/font-awesome.min.css" />" rel="stylesheet">
         <link href="<c:url value="/resources/assets/css/material-dashboard.css?v=2.0.0" />" rel="stylesheet">
         <link href="<c:url value="/resources/assets/assets-for-demo/demo.css" />" rel="stylesheet">
-    
+
 
         <link href="<c:url value="/resources/bootstrap/css/bootstrap.min.css" />" rel="stylesheet">
         <script src="<c:url value="/resources/bootstrap/js/bootstrap.min.js" />"></script>
@@ -63,7 +63,7 @@
                     },
                     data: [{
                             type: "bar",
-                            
+
                             indexLabel: "{y}",
                             dataPoints: dps[0]
                         }]
@@ -107,9 +107,16 @@ Tip 2: you can also add an image using data-image tag
                 <div class="sidebar-wrapper">
                     <ul class="nav">
 
+                        
+                      <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/admin/individual">
+                                <i class="material-icons"></i>
+                                <p>Individual Assessment</p>
+                            </a>
+                        </li>
+                        
                         <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/admin">
                                 <i class="material-icons"></i>
-                                <p>Performance Assessment</p>
+                                <p>General Assessment</p>
                             </a>
                         </li>
 
@@ -119,7 +126,7 @@ Tip 2: you can also add an image using data-image tag
                             </a>
                         </li>
 
-                      
+
 
                     </ul>
                 </div>
@@ -174,7 +181,7 @@ Tip 2: you can also add an image using data-image tag
                                 <div class="col-md-12">
                                     <div class="card">
                                         <div class="card-header card-header-primary">
-                                            <h4 class="card-title ">CATALOGUER COMPETENCY BASED PERFORMANCE ASSESSMENT</h4>
+                                            <h4 class="card-title ">Cataloguer Competency General Assessment </h4>
                                             <p class="card-category"></p>
                                         </div>
 
@@ -182,10 +189,10 @@ Tip 2: you can also add an image using data-image tag
 
                                             <div class="table-responsive">
 
-                                                
+
                                                 ${chartContainer}
-                                               
-                                                
+
+
                                                 <table class="table">
                                                     <thead class="text-primary">
                                                     <th>User</th>

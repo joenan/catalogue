@@ -14,4 +14,7 @@ public interface UserprofileRepository extends CrudRepository<Userprofile, Integ
     @Query("select u from Userprofile u where u.email = ?1 AND u.password = ?2")
     Userprofile findByEmailAndPassword(String email, String password);
 
+    @Query("select u from Userprofile u where u.name = ?1")
+    public Userprofile findUserByName(String name);
+
 }

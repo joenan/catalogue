@@ -5,7 +5,13 @@
  */
 package com.nandom.app.controller;
 
+import com.nandom.app.entities.Userprofile;
+import com.nandom.app.entities.Vwbehaviouralcategory;
+import com.nandom.app.entities.Vwfunctionalcategory;
+import com.nandom.app.entities.Vwknowledgecategory;
 import com.nandom.app.entities.Vwoveralltotal;
+import com.nandom.app.entities.Vwprofessionalcategory;
+import com.nandom.app.entities.Vwtechnologicalcategory;
 import com.nandom.app.service.AppService;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -98,6 +104,33 @@ public class AdminController {
         return "admin/performance";
     }
 
+    @GetMapping("/admin/individual")
+    public String getIndividualPage(ModelMap model) {
+        model.addAttribute("individual", service.getOverallTotalRepository().findAll());
+        model.addAttribute("userList", service.getUserService().findAll());
+        return "admin/individual";
+    }
+
+    @GetMapping("/admin/invidividual/view")
+    public String getIndividualPage(@RequestParam("name") String name, ModelMap model) {
+        // Userprofile user = service.getUserService().findUserByName(name);
+        //get Behavioural Category
+        List<Vwbehaviouralcategory> behaviouralCategoryList = service.getBehaviouralCategoryService().findUserByName(name);
+        List<Vwfunctionalcategory> functionalCategoryList = service.getFunctionalCategoryService().findUserByName(name);
+        List<Vwknowledgecategory> knowledgeCategoryList = service.getKnowledgeCategoryService().findUserByName(name);
+        List<Vwknowledgecategory> professionalCategoryList = service.getProfessionalCategoryService().findUserByName(name);
+        List<Vwknowledgecategory> technologicalCategoryList = service.getTechnologicalCategoryRepository().findUserByName(name);
+
+        model.addAttribute("behaviouralCategoryList", behaviouralCategoryList);
+        model.addAttribute("functionalCategoryList", functionalCategoryList);
+        model.addAttribute("knowledgeCategoryList", knowledgeCategoryList);
+        model.addAttribute("professionalCategoryList", professionalCategoryList);
+        model.addAttribute("technologicalCategoryList", technologicalCategoryList);
+
+        model.addAttribute("userList", service.getUserService().findAll());
+        return "admin/individual";
+    }
+
     @GetMapping("/admin/recommendations")
     public String getRecommendationsPage(ModelMap model) {
         model.addAttribute("performance", service.getOverallTotalRepository().findAll());
@@ -107,7 +140,7 @@ public class AdminController {
     @GetMapping("/admin/getrecommendation")
     public String getRecommendationsPage(ModelMap model, @RequestParam("recommendation") String recommendation) {
 
-        if (recommendation.equals("Recruitment")) {
+        if (recommendation.equals("Recruitment")) { 
             model.addAttribute("recruitment", service.getRecruitmentService().findByAverage());
             return "admin/recommendations";
 

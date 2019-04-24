@@ -6,6 +6,8 @@
 package com.nandom.app.repository;
 
 import com.nandom.app.entities.Vwknowledgecategory;
+import java.util.List;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -13,5 +15,8 @@ import org.springframework.data.repository.CrudRepository;
  * @author Nandom Gusen
  */
 public interface VwknowledgeCategoryRepository extends CrudRepository<Vwknowledgecategory, Integer> {
+
+    @Query("select u from Vwknowledgecategory u where u.name = ?1")
+    public List<Vwknowledgecategory> findUserByName(String name);
     
 }
